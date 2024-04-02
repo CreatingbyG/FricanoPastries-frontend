@@ -1,0 +1,12 @@
+.nav__links-custom {
+    color: #000000; 
+    text-decoration: none; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 4px 8px;
+  }
+  
+  .nav__links-custom svg {
+    margin-bottom: 8px;
+  }
