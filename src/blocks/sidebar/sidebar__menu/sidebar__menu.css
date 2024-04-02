@@ -1,0 +1,46 @@
+.sidebarMenu {
+    width: 250px; /* O el ancho que prefieras */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #fff; /* O el color de fondo que prefieras */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .nav__menu {
+    padding: 1em;
+  }
+  
+  .nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav__item a {
+    display: block;
+    padding: 0.5em 1em;
+    color: #333; /* O el color de texto que prefieras */
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .nav__item a:hover {
+    background-color: #f4f4f4; /* O el color de hover que prefieras */
+  }
+
+  .collapsed {
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: width 15s ease, opacity 15s ease;
+  }
+  
+  /* Estilos para el menú expandido */
+  .expanded {
+    width: 250px; /* O el ancho que prefieras */
+    opacity: 1;
+    /* display: block; */
+  }

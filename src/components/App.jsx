@@ -1,10 +1,14 @@
+import React, { useState } from 'react';
 import Header from "../components/Header";
 import Main from "../components/Main";
+import SidebarMenu from "./SidebarMenu";
 
-function App() {
+const App = () => {
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   return (
     <div>
-      <Header/>
+      <Header onLogoHover={() => setIsSidebarVisible(true)} onLogoLeave={() => setIsSidebarVisible(false)} />
+      <SidebarMenu isVisible={isSidebarVisible} />
       <Main />
     </div>
   )

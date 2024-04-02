@@ -3,22 +3,23 @@ import logo from "../assets/fricanologo1.svg";
 import navlogo from "../assets/fricanopastriesnavllogo.svg";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-function Header() {
+function Header({ onLogoHover, onLogoLeave }) {
   return (
     <div className="header">
       <div className="header__container">
         <nav className="sidebar">
           <div className="sidebar__logo">
-           <img className="sidebar__logo-image" src={navlogo} alt="Logo" />
+           <img className="sidebar__logo-image" src={navlogo} alt="Menu Logo"                      onMouseEnter={onLogoHover} 
+              onMouseLeave={onLogoLeave} />
           </div>
         </nav>
         <div className="logo__container">
-          <img className="logo" src={logo} alt="Logo" />
+          <img className="logo" src={logo} alt="Logo" />   
         </div>
         <ul className="nav__links">
           <li>
             <a href="#" class="nav__links-custom">
-              <i className="bi bi-house" style={{ fontSize: "24px" }}></i>
+              <i className="bi bi-cake-fill" style={{ fontSize: "24px" }}></i>
               Home
             </a>
           </li>
@@ -30,7 +31,7 @@ function Header() {
           </li> */}
           <li>
             <a href="#" class="nav__links-custom">
-              <i className="bi bi-table" style={{ fontSize: "24px" }}></i>Orders
+            <i class="bi bi-cart-fill" style={{ fontSize: "24px" }}></i>Orders
             </a>
           </li>
           {/* <li>
