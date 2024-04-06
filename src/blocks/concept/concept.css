@@ -1,0 +1,32 @@
+.concept-container {
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .concept__title {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .concept__description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 2.8;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .concept-image {
+    width: 50%;
+    height: 500px;
+    align-self: center;
+    margin: 20px 0;
+    border-radius: 100px;
+    box-shadow: 10px 10px 8px 10px rgb(239, 210, 223), 0 6px 20px 0 rgba(239, 210, 223, 0.19);
+    cursor: pointer;
+  }

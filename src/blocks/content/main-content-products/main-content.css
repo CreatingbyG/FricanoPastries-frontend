@@ -1,0 +1,6 @@
+.main-content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 250px;
+}

@@ -2,8 +2,7 @@
     display: flex; /* Esto habilita flexbox */
     justify-content: center; /* Centra los elementos horizontalmente */
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si no hay espacio */
-    margin-top: 14px; /* Equivalente a 'my-2' en Bootstrap */
-    margin-bottom: 14px; /* Equivalente a 'my-2' en Bootstrap */
+    margin: 14px; /* Equivalente a 'my-2' en Bootstrap */ /* Equivalente a 'my-2' en Bootstrap */
     gap:20px;
     list-style: none;
 }
