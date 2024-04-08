@@ -24,7 +24,7 @@ const cakes = [
   // ... crea un objeto para cada torta
 ];
 
-const Cakes = () => {
+const Cakes = ({ onAddToCart }) => {
   return (
     <div className="cakes-container" id="cakes-container">
       {cakes.map((cake) => (
@@ -38,6 +38,9 @@ const Cakes = () => {
             <p>{cake.name}</p>
             <p>{cake.description}</p>
             <p>{cake.price}</p>
+            {cake.id !== 8 && (
+              <button className="buy__button" onClick={() => onAddToCart(cake)}>Buy</button>
+            )}
           </div>
         </div>
       ))}

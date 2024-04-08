@@ -3,8 +3,9 @@ import logo from "../assets/fricanologo1.svg";
 import navlogo from "../assets/fricanopastriesnavllogo.svg";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-function Header({ onLogoHover, onLogoLeave }) {
+function Header({ onLogoHover, onLogoLeave, isAnimating }) {
   return (
+    console.log(isAnimating),
     <div className="header">
       <div className="header__container">
         <nav className="sidebar">
@@ -18,7 +19,7 @@ function Header({ onLogoHover, onLogoLeave }) {
         </div>
         <ul className="nav__links">
           <li>
-            <a href="#" class="nav__links-custom">
+            <a href="/" class="nav__links-custom">
               <i className="bi bi-cake-fill" style={{ fontSize: "24px" }}></i>
               Home
             </a>
@@ -30,8 +31,8 @@ function Header({ onLogoHover, onLogoLeave }) {
             </a>
           </li> */}
           <li>
-            <a href="#" class="nav__links-custom">
-            <i class="bi bi-cart-fill" style={{ fontSize: "24px" }}></i>Orders
+          <a href="" className={`nav__links-custom ${isAnimating ? 'animate' : ''}`}>
+            <i className="bi bi-cart-fill" style={{ fontSize: "24px" }}></i>Orders
             </a>
           </li>
           {/* <li>

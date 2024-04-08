@@ -69,6 +69,7 @@ button:focus-visible {
 
 
 @import "./blocks/body/body.css";
+@import "./blocks/global/global.css";
 @import "./blocks/header/header.css";
 @import "./blocks/header/header__container/header__container.css";
 @import "./blocks/logo/logo.css";
@@ -85,4 +86,7 @@ button:focus-visible {
 @import "./blocks/content/products/products.css";
 @import "./blocks/content/products/pavlova/pavlova.css"; 
 @import "./blocks/cakes/cakes.css";
+@import "./blocks/cakes/buy__button/buy__button.css";
 @import "./blocks/concept/concept.css";
+@import "./blocks/contact/contact.css";
+@import "./blocks/footer/footer.css";

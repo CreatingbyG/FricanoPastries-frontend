@@ -1,4 +1,4 @@
-import React from "react"; // Asegúrate de importar el CSS
+import React from "react";
 
 const SidebarMenu = ({ isVisible }) => {
   return (
@@ -6,7 +6,7 @@ const SidebarMenu = ({ isVisible }) => {
       <nav className="nav__menu">
         <ul className="nav__list">
           <li className="nav__item">
-            <a href="#pavlova">
+            <a href="pavlova">
               <i
                 className="bi bi-cake-fill"
                 style={{ fontSize: "12px", padding: "3px 5px" }}
@@ -15,7 +15,7 @@ const SidebarMenu = ({ isVisible }) => {
             </a>
           </li>
           <li className="nav__item">
-            <a href="#concept">
+            <a href="concept">
               <i
                 class="bi bi-journal-text"
                 style={{ fontSize: "12px", padding: "3px 5px" }}
@@ -24,7 +24,7 @@ const SidebarMenu = ({ isVisible }) => {
             </a>
           </li>
           <li className="nav__item">
-            <a href="#products">
+            <a href="products">
               <i
                 class="bi bi-basket"
                 style={{ fontSize: "12px", padding: "3px 5px" }}
@@ -33,7 +33,7 @@ const SidebarMenu = ({ isVisible }) => {
             </a>
           </li>
           <li className="nav__item">
-            <a href="#contact">
+            <a href="contact">
               <i
                 class="bi bi-person-lines-fill"
                 style={{ fontSize: "12px", padding: "3px 5px" }}
