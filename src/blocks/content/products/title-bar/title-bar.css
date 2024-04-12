@@ -4,7 +4,7 @@
       opacity: 0.5; /* Opacidad inicial y final */
     }
     50% {
-      width: 70%; /* Tamaño máximo al que se agranda */
+      width: 110%; /* Tamaño máximo al que se agranda */
       opacity: 1; /* Opacidad máxima */
     }
   }

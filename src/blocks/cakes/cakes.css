@@ -26,7 +26,6 @@
   }
 
   .cake-card:hover::after {
-    content: ''; /* Contenido vacío para el pseudo-elemento */
     position: absolute; /* Posicionamiento absoluto respecto al padre relativo */
     top: 0;
     left: 0;
@@ -51,8 +50,7 @@
   }
 
   .cake-description {
-    opacity: 0; /* Hacer la descripción transparente inicialmente */
-    transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+    opacity: 0; 
   }
 
   .see-more {

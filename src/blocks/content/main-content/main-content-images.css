@@ -1,20 +1,13 @@
-.main-content-images{
-    width: 100%;
-    height: 300px;
-    /* background-color: pink; */
-    border-radius: 600px;
-    cursor: pointer;
-}
+.main-content-images-about-us {
+    width: 450px;
+    height: 450px;
+    margin-bottom: 20px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+    cursor:grab;
+  }
 
-.main-content-images-about-us{
-    width: 100%;
-    height: 200px;
-    margin-bottom: 50px;
-    /* background-color: pink; */
-    border-radius: 600px;
-    cursor: pointer;
-}
-
-.main-content-images:hover, .main-content-images-about-us:hover{
+.main-content-images-about-us:hover{
     transition: 4s ease forwards;   
 }

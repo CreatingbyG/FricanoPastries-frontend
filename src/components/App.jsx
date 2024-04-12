@@ -3,57 +3,58 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Header from "./Header";
 import Main from "./Main";
 import SidebarMenu from "./SidebarMenu";
-import Cakes from './Cakes';
-import Concept from './Concept';
-import Footer from './Footer';
-import Contact from './Contact';
+import Cakes from "./Cakes";
+import Concept from "./Concept";
+import Footer from "./Footer";
+import Contact from "./Contact";
 
 const App = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
-  const [cart, setCart] = useState(() => {
-    // Cargar el carrito desde localStorage o iniciar con un array vacío
-    const savedCart = localStorage.getItem('cart');
-    return savedCart ? JSON.parse(savedCart) : [];
-  });
-  const [isAnimating, setIsAnimating] = useState(false);
-  const animatingTimeoutRef = useRef();
+  const [animate, setAnimate] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
+  const [isOrderActive, setIsOrderActive] = useState(false)
 
-  
-  useEffect(() => {
-    // Guardar el carrito en localStorage cada vez que cambie
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart]);
-
-  const handleAddToCart = (cake) => {
-    console.log('Adding to cart:', cake); // Depuración: verifica que la función se llame
-    setCart((prevCart) => {
-      const updatedCart = [...prevCart, cake];
-      localStorage.setItem('cart', JSON.stringify(updatedCart));
-      console.log('Cart after adding:', updatedCart); // Depuración: verifica el carrito actualizado
-      return updatedCart;
+  const addToCart = (cake) => {
+    setCartItems(prevItems => {
+      // Verifica si el producto ya está en el carrito
+      const itemExists = prevItems.find(item => item.id === cake.id);
+      if (itemExists) {
+        // Incrementa la cantidad
+        return prevItems.map(item =>
+          item.id === cake.id ? { ...item, quantity: item.quantity + 1 } : item
+        );
+      } else {
+        // Agrega el nuevo producto con cantidad 1
+        return [...prevItems, { ...cake, quantity: 1 }];
+      }
     });
-    triggerCartAnimation();
   };
 
-  const triggerCartAnimation = () => {
-    console.log('Triggering cart animation'); // Depuración: verifica que la función se llame
-    setIsAnimating(true);
-    if (animatingTimeoutRef.current) {
-      clearTimeout(animatingTimeoutRef.current);
-    }
-    animatingTimeoutRef.current = setTimeout(() => {
-      setIsAnimating(false);
-      console.log('Animation ended'); // Depuración: verifica que la animación termine
-    }, 1000);
+  const removeFromCart = (id) => {
+    setCartItems(prevItems => {
+      // Encuentra el producto en el carrito
+      const existingItem = prevItems.find(item => item.id === id);
+  
+      // Si solo hay uno, lo elimina completamente
+      if (existingItem.quantity === 1) {
+        return prevItems.filter(item => item.id !== id);
+      } else {
+        // Si hay más de uno, reduce la cantidad
+        return prevItems.map(item =>
+          item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+        );
+      }
+    });
   };
+
 
   return (
     <div>
-      <Header onLogoHover={() => setIsSidebarVisible(true)} onLogoLeave={() => setIsSidebarVisible(false)} isAnimating={isAnimating}/>
+      <Header onLogoHover={() => setIsSidebarVisible(true)} onLogoLeave={() => setIsSidebarVisible(false)} animate={animate} setAnimate={setAnimate}   isOrderActive={isOrderActive} setIsOrderActive={setIsOrderActive}   cartItems={cartItems}  removeFromCart={removeFromCart}/>
       <SidebarMenu isVisible={isSidebarVisible} />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="products" element={<Cakes onAddToCart={handleAddToCart}/>} />
+        <Route path="products" element={<Cakes setAnimate={setAnimate} addToCart={addToCart}/>} />
         <Route path="concept" element={<Concept />} />
         <Route path="contact" element={<Contact />} />
       </Routes>

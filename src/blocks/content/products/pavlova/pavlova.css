@@ -3,6 +3,7 @@
     margin: 16px;
     border-radius: 10px; 
     cursor: pointer;
+    animation: 2s ease-out 0s infinite slideInFromLeft;
   }
 
   .pavlova:hover {

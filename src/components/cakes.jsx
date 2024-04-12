@@ -24,24 +24,38 @@ const cakes = [
   // ... crea un objeto para cada torta
 ];
 
-const Cakes = ({ onAddToCart }) => {
+const Cakes = ({ setAnimate, addToCart }) => { // Asegúrate de pasar setAnimate como prop si planeas usarlo
+
+  const handleBuyClick = (cake) => {
+    setTimeout(() => setAnimate(true), 10); // Luego establece a true para activar la animación
+  setTimeout(() => setAnimate(false), 3010); 
+  addToCart(cake);
+  };
+
+
+
   return (
     <div className="cakes-container" id="cakes-container">
       {cakes.map((cake) => (
         <div key={cake.id} className="cake-card">
-                    {cake.id !== 8 ? (
-            <img src={cake.imageUrl} alt={cake.name} />
+          {cake.id !== 8 ? (
+            <>
+              <img src={cake.imageUrl} alt={cake.name} />
+              <div className="cake-description">
+                <p>{cake.name}</p>
+                <p>{cake.description}</p>
+                <p>{cake.price}</p>
+                <button type="button" className="buy__button" onClick={() => handleBuyClick(cake)}>Buy</button>
+              </div>
+            </>
           ) : (
-            cake.imageUrl
+            <>
+              {cake.imageUrl}
+              <div className="cake-description">
+                <p>{cake.description}</p>
+              </div>
+            </>
           )}
-          <div className="cake-description">
-            <p>{cake.name}</p>
-            <p>{cake.description}</p>
-            <p>{cake.price}</p>
-            {cake.id !== 8 && (
-              <button className="buy__button" onClick={() => onAddToCart(cake)}>Buy</button>
-            )}
-          </div>
         </div>
       ))}
     </div>

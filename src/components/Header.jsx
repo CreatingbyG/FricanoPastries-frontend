@@ -2,10 +2,15 @@ import React from "react";
 import logo from "../assets/fricanologo1.svg";
 import navlogo from "../assets/fricanopastriesnavllogo.svg";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Cakes from "./Cakes";
 
-function Header({ onLogoHover, onLogoLeave, isAnimating }) {
+function Header({ onLogoHover, onLogoLeave, animate, cartItems, isOrderActive, setIsOrderActive, removeFromCart}) {
+
+  const handleRemoveItem = (id) => {
+    removeFromCart(id);
+  };
+
   return (
-    console.log(isAnimating),
     <div className="header">
       <div className="header__container">
         <nav className="sidebar">
@@ -19,8 +24,8 @@ function Header({ onLogoHover, onLogoLeave, isAnimating }) {
         </div>
         <ul className="nav__links">
           <li>
-            <a href="/" class="nav__links-custom">
-              <i className="bi bi-cake-fill" style={{ fontSize: "24px" }}></i>
+            <a href="/" className="nav__links-custom">
+              <i className="bi bi-house-heart" style={{ fontSize: "24px" }}></i>
               Home
             </a>
           </li>
@@ -31,9 +36,29 @@ function Header({ onLogoHover, onLogoLeave, isAnimating }) {
             </a>
           </li> */}
           <li>
-          <a href="" className={`nav__links-custom ${isAnimating ? 'animate' : ''}`}>
-            <i className="bi bi-cart-fill" style={{ fontSize: "24px" }}></i>Orders
+          <a href="#" className={`nav__links-custom ${animate ? 'animate' : ' '}`} onClick={() => setIsOrderActive(!isOrderActive)}>
+          <i className="bi bi-bag" style={{ fontSize: "24px" }}></i>Orders
             </a>
+            <div className="cart__dropdown" style={{ display: isOrderActive ? 'block' : 'none' }}>
+              {cartItems.length > 0 ? (
+                cartItems.map(cake => (
+                  <div key={cake.id} className="cart-item">
+                    <img src={cake.imageUrl} alt={cake.name} />
+                    <div>
+                      <p>{cake.name}</p>
+                      <p>Quantity: {cake.quantity}</p>
+                      <p>Price: ${cake.price}</p>
+                      <button className="remove-item-button" onClick={() => handleRemoveItem(cake.id)}>-</button>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <p className="cart-empty">Tu carrito está vacío.</p>
+              )}
+              {cartItems.length > 0 && (
+                <button className="checkout-button">Checkout</button>
+              )}
+            </div>
           </li>
           {/* <li>
             <a href="#" class="nav__links-custom">
