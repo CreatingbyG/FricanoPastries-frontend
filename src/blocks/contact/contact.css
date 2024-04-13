@@ -1,8 +1,14 @@
-.contact-container {
+.contact__container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     padding-top: 150px;
+  }
+
+  .contact__container-title{
+    font-family: "Whisper", Arial, Helvetica, sans-serif;
+    font-style:  italic;
+    font-size: 36px;
   }
   
   .contact-form {
@@ -24,19 +30,22 @@
   .form-group input[type="email"],
   .form-group select {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
   }
   
-  .form-group button {
-    padding: 10px 20px;
-    background-color: #0052cc;
-    color: white;
-    border: none;
-    border-radius: 4px;
+  .contact__btn {
+    width: 150px;
+    height: 60px;
+    border: 2px solid #ffc0cb91;
+    border-radius: 45px;
+    transition: all 0.3s;
     cursor: pointer;
+    background: white;
+    font-size: 16px;
+    font-weight: 550;
+    font-family: "Quicksand", Arial, Helvetica, sans-serif;
   }
   
-  .form-group button:hover {
-    background-color: #003d99;
+  .contact__btn:hover {
+    background: #ffc0cb91;
+    font-size: 1.5em;
   }

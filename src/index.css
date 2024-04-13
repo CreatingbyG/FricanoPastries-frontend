@@ -93,4 +93,5 @@ button:focus-visible {
 @import "./blocks/concept/concept.css";
 @import "./blocks/contact/contact.css";
 @import "./blocks/cart/cart.css";
+@import "./blocks/checkout/checkout.css";
 @import "./blocks/footer/footer.css";

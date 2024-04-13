@@ -1,13 +1,20 @@
 import React from "react";
+import {useNavigate} from "react-router-dom"
 import logo from "../assets/fricanologo1.svg";
 import navlogo from "../assets/fricanopastriesnavllogo.svg";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import Cakes from "./Cakes";
+
 
 function Header({ onLogoHover, onLogoLeave, animate, cartItems, isOrderActive, setIsOrderActive, removeFromCart}) {
 
+  const navigate = useNavigate();
+
   const handleRemoveItem = (id) => {
     removeFromCart(id);
+  };
+
+  const handleCheckout = () => {
+    navigate("checkout");
   };
 
   return (
@@ -56,7 +63,7 @@ function Header({ onLogoHover, onLogoLeave, animate, cartItems, isOrderActive, s
                 <p className="cart-empty">Tu carrito está vacío.</p>
               )}
               {cartItems.length > 0 && (
-                <button className="checkout-button">Checkout</button>
+                <button onClick={handleCheckout} className="checkout-button">Checkout</button>
               )}
             </div>
           </li>

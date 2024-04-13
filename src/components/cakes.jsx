@@ -24,7 +24,7 @@ const cakes = [
   // ... crea un objeto para cada torta
 ];
 
-const Cakes = ({ setAnimate, addToCart }) => { // Asegúrate de pasar setAnimate como prop si planeas usarlo
+const Cakes = ({ setAnimate, addToCart }) => {
 
   const handleBuyClick = (cake) => {
     setTimeout(() => setAnimate(true), 10); // Luego establece a true para activar la animación
