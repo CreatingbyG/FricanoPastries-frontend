@@ -7,8 +7,9 @@ import Cakes from "./Cakes";
 import Concept from "./Concept";
 import Footer from "./Footer";
 import Contact from "./Contact";
-import Checkout from "./Checkout";
+import Checkout from "./PayButton";
 import CurrentCartContext from "../contexts/CurrentCartContext";
+
 
 const App = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
@@ -72,7 +73,7 @@ const App = () => {
           />
           <Route path="concept" element={<Concept />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="checkout" element={<Checkout />} />
+          <Route path="checkout" element={<Checkout cartItems={cartItems}/>} />
         </Routes>
       <Footer />
     </div>

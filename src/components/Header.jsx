@@ -1,21 +1,16 @@
 import React from "react";
-import {useNavigate} from "react-router-dom"
 import logo from "../assets/fricanologo1.svg";
 import navlogo from "../assets/fricanopastriesnavllogo.svg";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import PayButton from "./PayButton";
 
 
 function Header({ onLogoHover, onLogoLeave, animate, cartItems, isOrderActive, setIsOrderActive, removeFromCart}) {
-
-  const navigate = useNavigate();
 
   const handleRemoveItem = (id) => {
     removeFromCart(id);
   };
 
-  const handleCheckout = () => {
-    navigate("checkout");
-  };
 
   return (
     <div className="header">
@@ -50,11 +45,11 @@ function Header({ onLogoHover, onLogoLeave, animate, cartItems, isOrderActive, s
               {cartItems.length > 0 ? (
                 cartItems.map(cake => (
                   <div key={cake.id} className="cart-item">
-                    <img src={cake.imageUrl} alt={cake.name} />
+                    <img name="image" src={cake.imageUrl} alt={cake.name} />
                     <div>
-                      <p>{cake.name}</p>
-                      <p>Quantity: {cake.quantity}</p>
-                      <p>Price: ${cake.price}</p>
+                      <p name="name">{cake.name}</p>
+                      <p name="quantity">Quantity: {cake.quantity}</p>
+                      <p name="price">Price: ${cake.price}</p>
                       <button className="remove-item-button" onClick={() => handleRemoveItem(cake.id)}>-</button>
                     </div>
                   </div>
@@ -63,7 +58,7 @@ function Header({ onLogoHover, onLogoLeave, animate, cartItems, isOrderActive, s
                 <p className="cart-empty">Tu carrito está vacío.</p>
               )}
               {cartItems.length > 0 && (
-                <button onClick={handleCheckout} className="checkout-button">Checkout</button>
+                <PayButton cartItems={cartItems}/>
               )}
             </div>
           </li>
