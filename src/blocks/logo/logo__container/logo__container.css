@@ -1,5 +1,24 @@
-.logo__container{
-    width: 500px;
-    height: 100px;
-    margin: 0 auto;
+.logo__container {
+  width: 500px;
+  height: 100px;
+  margin: 0 auto;
 }
+
+@media screen and (max-width: 760px) {
+  .logo__container {
+    width: 250px;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+    .logo__container {
+      width: 200px;
+    }
+  }
+
+  @media screen and (max-width: 460px) {
+    .logo__container {
+      width: 120px;
+    }
+  }

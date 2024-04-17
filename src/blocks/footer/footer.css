@@ -44,3 +44,23 @@
   .social-link:hover {
     color: #666; /* Cambia al color de hover deseado */
   }
+
+  @media screen and (max-width: 540px) {
+    .footer-logo {
+      width: 40%;
+      margin: auto;
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    .footer-logo {
+      width: 20%;
+    }
+  }
+
+  
+  @media screen and (max-width: 520px) {
+    .footer-section {
+font-size: 12px;
+    }
+  }

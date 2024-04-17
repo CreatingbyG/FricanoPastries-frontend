@@ -10,3 +10,9 @@
   .nav__links-custom svg {
     margin-bottom: 8px;
   }
+
+  @media screen and (max-width: 460px) {
+    .nav__links-custom {
+      font-size: 14px;
+    }
+  }

@@ -12,7 +12,7 @@ const Footer = () => {
           <p>Miami, Florida</p>
           <span><p className="footer__icons"><i class="bi bi-telephone-forward-fill"></i>  305-000-00-00</p></span>
         </div>
-        <div className="footer-section-schedule">
+        <div className="footer-section footer-section-schedule">
           <h3>Schedule:</h3>
           <span><p className="footer__icons"><i class="bi bi-stopwatch-fill"></i> Monday to Friday: 09-19</p></span>
           <span><p className="footer__icons"><i class="bi bi-stopwatch-fill"></i> Saturday: 10-18</p></span>

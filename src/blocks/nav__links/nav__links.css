@@ -1,8 +1,30 @@
-.nav__links{
-    display: flex; /* Esto habilita flexbox */
-    justify-content: center; /* Centra los elementos horizontalmente */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si no hay espacio */
-    margin: 14px; /* Equivalente a 'my-2' en Bootstrap */ /* Equivalente a 'my-2' en Bootstrap */
-    gap:20px;
-    list-style: none;
+.nav__links {
+  display: flex; /* Esto habilita flexbox */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si no hay espacio */
+  margin: 14px; /* Equivalente a 'my-2' en Bootstrap */ /* Equivalente a 'my-2' en Bootstrap */
+  gap: 20px;
+  list-style: none;
+}
+
+@media screen and (max-width: 910px) {
+  .nav__links {
+    margin: 5px;
+    gap: 0px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .nav__links {
+    margin: 15px;
+    gap: 0px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .nav__links {
+    margin: 10px;
+    gap: 0px;
+    flex-wrap: wrap;
+  }
 }

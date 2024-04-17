@@ -1,4 +1,4 @@
-import React, { useState, useContext} from "react";
+import React, { useState, useContext, useEffect} from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import Main from "./Main";
@@ -14,13 +14,19 @@ import CurrentCartContext from "../contexts/CurrentCartContext";
 const App = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const [animate, setAnimate] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCartItems = localStorage.getItem('cartItems');
+    return savedCartItems ? JSON.parse(savedCartItems) : [];
+  });
   const [isOrderActive, setIsOrderActive] = useState(false);
 
 
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  }, [cartItems]);
+
   const addToCart = (cake) => {
     setCartItems((prevItems) => {
-      // Verifica si el producto ya está en el carrito
       const itemExists = prevItems.find((item) => item.id === cake.id);
       if (itemExists) {
         // Incrementa la cantidad
