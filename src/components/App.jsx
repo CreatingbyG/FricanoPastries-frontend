@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect} from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import Main from "./Main";
@@ -8,22 +8,26 @@ import Concept from "./Concept";
 import Footer from "./Footer";
 import Contact from "./Contact";
 import Checkout from "./PayButton";
+import SuccessCheckout from "./SuccessCheckout";
 import CurrentCartContext from "../contexts/CurrentCartContext";
 
 
 const App = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const [animate, setAnimate] = useState(false);
-  const [cartItems, setCartItems] = useState(() => {
-    const savedCartItems = localStorage.getItem('cartItems');
-    return savedCartItems ? JSON.parse(savedCartItems) : [];
-  });
+  const [cartItems, setCartItems] = useState(
+    []
+  )
+  // ) => {
+  //   const savedCartItems = localStorage.getItem('cartItems');
+  //   return savedCartItems ? JSON.parse(savedCartItems) : [];
+  // });
   const [isOrderActive, setIsOrderActive] = useState(false);
 
 
-  useEffect(() => {
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  }, [cartItems]);
+  // useEffect(() => {
+  //   localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  // }, [cartItems]);
 
   const addToCart = (cake) => {
     setCartItems((prevItems) => {
@@ -80,6 +84,7 @@ const App = () => {
           <Route path="concept" element={<Concept />} />
           <Route path="contact" element={<Contact />} />
           <Route path="checkout" element={<Checkout cartItems={cartItems}/>} />
+          <Route path="success" element={<SuccessCheckout />} />
         </Routes>
       <Footer />
     </div>

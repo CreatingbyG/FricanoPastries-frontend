@@ -26,8 +26,8 @@ router.post('/create-checkout-session', async (req, res) => {
       };
     }),
     mode: 'payment',
-    success_url: 'http://localhost:3000/?success=true',
-    cancel_url: 'http://localhost:3000/?cancel=false',
+    success_url: `${process.env.CLIENT_URL}/success`,
+    cancel_url: `${process.env.CLIENT_URL}/products`,
   });
 
   res.send({url: session.url});
