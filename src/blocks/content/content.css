@@ -4,3 +4,15 @@
     flex-direction: column;
     margin: 200px 200px;
 }
+
+@media screen and (max-width: 740px) {
+    .content {
+      margin: 200px 100px;
+    }
+  }
+
+  @media screen and (max-width: 440px) {
+    .content {
+      margin-bottom: 0px;
+    }
+  }

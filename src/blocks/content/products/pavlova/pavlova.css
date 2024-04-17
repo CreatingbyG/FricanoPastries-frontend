@@ -10,3 +10,15 @@
     transition: 4s ease forwards;
     transform: scale(1.05)
   }
+
+  @media screen and (max-width: 850px) {
+    .pavlova {
+      width: 500px;
+    }
+  }
+
+  @media screen and (max-width: 530px) {
+    .pavlova {
+      width: 300px;
+    }
+  }

@@ -1,7 +1,7 @@
 .about-us{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 250px; /* Ajusta según sea necesario */
   }
 
@@ -19,10 +19,35 @@
     font-family: "Whisper";
   }
 
+  .about-us__icon{
+    margin-left: 20px;
+  }
+
   .about-us__text{
     font-size: 28px;
     margin: 0px 0px;
     margin-left: 20px;
     font-family: "Quicksand", Arial, Helvetica, sans-serif;
     font-style: ialic;
+  }
+
+  @media screen and (max-width: 1120px) {
+    .about-us {
+      display: block;
+    }
+    .about-us__description{
+      padding-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: 530px) {
+    .about-us {
+      margin-top: 50px;
+    }
+  }
+
+  @media screen and (max-width: 530px) {
+    .about-us__text {
+      font-size: 14px;
+    }
   }

@@ -11,3 +11,24 @@
 .main-content-images-about-us:hover{
     transition: 4s ease forwards;   
 }
+
+@media screen and (max-width: 640px) {
+  .main-content-images-about-us {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-content-images-about-us {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-content-images-about-us {
+    width: 150px;
+    height: 150px;
+  }
+}
