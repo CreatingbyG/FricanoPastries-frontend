@@ -9,8 +9,6 @@ import choux from "../assets/Choux.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 
-
-// Crea un array de objetos con la información de las tortas
 const cakes = [
   { id: 1, name: 'Strawberry', imageUrl: strawberryCake, description: 'Descripción de la torta de chocolate', price: 20 },
   { id: 2, name: 'Strawberry and Passion', imageUrl: strawberryAndPassion, description: 'Descripción de la torta de vainilla', price: 18 },
@@ -21,13 +19,12 @@ const cakes = [
   { id: 7, name: 'Choux', imageUrl: choux, description: 'Descripción de la torta de vainilla', price: 18 },
   {id: 8, imageUrl: <i class="bi bi-emoji-frown-fill" style={{ fontSize: "50px" }}></i>, description: "Sorry, we are currently working in more for you"}
 
-  // ... crea un objeto para cada torta
 ];
 
 const Cakes = ({ setAnimate, addToCart }) => {
 
   const handleBuyClick = (cake) => {
-    setTimeout(() => setAnimate(true), 10); // Luego establece a true para activar la animación
+    setTimeout(() => setAnimate(true), 10);
   setTimeout(() => setAnimate(false), 3010); 
   addToCart(cake);
   };

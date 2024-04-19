@@ -1,5 +1,5 @@
-import React from "react"; // Asegúrate de tener un archivo CSS para los estilos
-import conceptImage from "../assets/ourconcept2.png"; // Reemplaza con la ruta de tu imagen
+import React from "react";
+import conceptImage from "../assets/ourconcept2.png";
 
 const Concept = () => {
   return (

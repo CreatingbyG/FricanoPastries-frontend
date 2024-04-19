@@ -46,12 +46,12 @@ function Header({ onLogoHover, onLogoLeave, animate, cartItems, isOrderActive, s
                 cartItems.map(cake => (
                   <div key={cake.id} className="cart-item">
                     <img name="image" src={cake.imageUrl} alt={cake.name} />
-                    <div>
+                    <div className="cart-item-products">
                       <p name="name">{cake.name}</p>
                       <p name="quantity">Quantity: {cake.quantity}</p>
                       <p name="price">Price: ${cake.price}</p>
-                      <button className="remove-item-button" onClick={() => handleRemoveItem(cake.id)}>-</button>
                     </div>
+                    <button className="remove-item-button" onClick={() => handleRemoveItem(cake.id)}>-</button>
                   </div>
                 ))
               ) : (
