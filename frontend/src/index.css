@@ -1,7 +1,7 @@
 @import "./blocks/body/body.css";
 @import "./blocks/header/header.css";
-@import "./fonts/abel/abel.css";
-@import "./fonts/quicksand/quicksand.css";
+@import "../fonts/abel/abel.css";
+@import "../fonts/quicksand/quicksand.css";
 @import "./blocks/global/global.css";
 @import "./blocks/header/header__container/header__container.css";
 @import "./blocks/logo/logo.css";
