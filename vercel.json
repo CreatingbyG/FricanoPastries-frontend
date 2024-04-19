@@ -12,7 +12,16 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/frontend/dist/$1"
+        "dest": "/frontend/dist/$1",
+        "continue": true
+      },
+      {
+        "handle": "filesystem"
+      },
+      {
+        "src": "/.*",
+        "status": 404,
+        "dest": "/frontend/dist/index.html"
       }
     ]
   }
