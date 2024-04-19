@@ -25,7 +25,7 @@ dist-ssr
 
 # misc
 .DS_Store
-/backend/.env
+.env
 .env.development.local
 .env.test.local
 .env.production.local
