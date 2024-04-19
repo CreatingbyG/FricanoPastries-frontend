@@ -1,6 +1,7 @@
 require('dotenv').config(); 
 const express = require('express');
 const stripeRoute = require('./routes/stripe');
+const productRoutes = require('./routes/products');
 const PORT = process.env.PORT  || 5000;
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -16,6 +17,7 @@ app.options('*', cors());
 
 
 app.use("/stripe", stripeRoute);
+app.use("/products", productRoutes)
 
 app.get("/", (req, res) => {
   res.send("Welcome our to online shop API...");

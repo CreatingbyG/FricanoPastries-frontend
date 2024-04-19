@@ -1,12 +1,12 @@
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# # dependencies
+# /node_modules
+# /.pnp
+# .pnp.js
 
 
-# misc
-.DS_Store
-/.env
-.env.development.local
-.env.test.local
-.env.production.local
+# # misc
+# .DS_Store
+# /backend/.env
+# .env.development.local
+# .env.test.local
+# .env.production.local
