@@ -1,0 +1,17 @@
+.products__title {
+  font-family: "Abel", sans-serif, Arial, Helvetica;
+  font-variant: all-petite-caps;
+  font-size: 56px;
+}
+
+@media screen and (max-width: 850px) {
+  .products__title {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .products__title {
+    font-size: 22px;
+  }
+}

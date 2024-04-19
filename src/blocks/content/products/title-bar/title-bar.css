@@ -1,0 +1,18 @@
+@keyframes pulse {
+    0%, 100% {
+      width: 50%; /* Tamaño inicial y final */
+      opacity: 0.5; /* Opacidad inicial y final */
+    }
+    50% {
+      width: 110%; /* Tamaño máximo al que se agranda */
+      opacity: 1; /* Opacidad máxima */
+    }
+  }
+
+.title-bar{
+    width: 70%;
+    margin-bottom: 42px;
+    color: #ffc0cbc7;
+    border-bottom: solid 3px;
+    animation: pulse 3s infinite;
+}

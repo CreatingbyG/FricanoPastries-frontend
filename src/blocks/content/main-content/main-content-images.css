@@ -1,0 +1,34 @@
+.main-content-images-about-us {
+    width: 450px;
+    height: 450px;
+    margin-bottom: 20px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+    cursor:grab;
+  }
+
+.main-content-images-about-us:hover{
+    transition: 4s ease forwards;   
+}
+
+@media screen and (max-width: 640px) {
+  .main-content-images-about-us {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-content-images-about-us {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-content-images-about-us {
+    width: 150px;
+    height: 150px;
+  }
+}

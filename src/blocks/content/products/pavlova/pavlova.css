@@ -1,0 +1,24 @@
+.pavlova{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 16px;
+    border-radius: 10px; 
+    cursor: pointer;
+    animation: 2s ease-out 0s infinite slideInFromLeft;
+  }
+
+  .pavlova:hover {
+    transition: 4s ease forwards;
+    transform: scale(1.05)
+  }
+
+  @media screen and (max-width: 850px) {
+    .pavlova {
+      width: 500px;
+    }
+  }
+
+  @media screen and (max-width: 530px) {
+    .pavlova {
+      width: 300px;
+    }
+  }

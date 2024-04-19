@@ -1,0 +1,11 @@
+.sidebar__logo-image{
+    height: 100px;
+    width: 150px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+    .sidebar__logo-image {
+      width: 100px;
+    }
+  }

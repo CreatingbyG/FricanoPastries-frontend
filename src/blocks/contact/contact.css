@@ -1,0 +1,59 @@
+.contact__container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 150px;
+  }
+
+  .contact__container-title{
+    font-family: "Whisper", Arial, Helvetica, sans-serif;
+    font-style:  italic;
+    font-size: 36px;
+  }
+  
+  .contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group select {
+    padding: 10px;
+  }
+  
+  .contact__btn {
+    width: 150px;
+    height: 60px;
+    border: 2px solid #ffc0cb91;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+    font-size: 16px;
+    font-weight: 550;
+    font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  }
+  
+  .contact__btn:hover {
+    background: #ffc0cb91;
+    font-size: 1.5em;
+  }
+
+  @media screen and (max-width: 480px) {
+    .contact-form {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 10px;
+    }
+  }
