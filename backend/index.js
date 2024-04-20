@@ -5,15 +5,18 @@ const productRoutes = require('./routes/products');
 const PORT = process.env.PORT  || 3000;
 const cors = require('cors');
 const mongoose = require('mongoose');
+const corsOptions = {
+  origin: 'https://fricanopastries.mooo.com', // Reemplaza esto con el dominio real de tu frontend
+  optionsSuccessStatus: 200 // Algunos navegadores antiguos (IE11, varios SmartTVs) requieren esto
+};
 
 const app = express();
 
 
 
-
 app.use(express.json());
-app.use(cors())
-app.options('*', cors());
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 
 app.use("/stripe", stripeRoute);
