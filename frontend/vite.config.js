@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/stripe': 'http://localhost:5000'
+      '/stripe': 'http://localhost:3000'
     }
   }
 })
