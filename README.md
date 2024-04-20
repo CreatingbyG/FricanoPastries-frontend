@@ -1,60 +1,60 @@
-# Fricano Pastries Ecommerce Platform
+# Fricano Pastry e-commerce platform
 
-## Descripción
-Bienvenido al repositorio del proyecto de ecommerce de Fricano Pastries. Este proyecto es una plataforma de comercio electrónico donde los usuarios pueden explorar y comprar tortas, aprender sobre el concepto detrás de las pavlovas creadas por la fundadora, y realizar pagos seguros a través de Stripe.
+## Description
+Welcome to the Fricano Pastries e-commerce project repository. This project is an e-commerce platform where users can browse and purchase cakes, learn about the concept behind the pavlovas created by the founder, and make secure payments through Stripe.
 
-## Características
-- Catálogo de tortas y pavlovas.
-- Información sobre el concepto y la creadora.
-- Pasarela de pago integrada con Stripe para transacciones seguras.
+## Characteristics
+- Catalog of cakes and pavlovas.
+- Information about the concept and the creator.
+- Payment gateway integrated with Stripe for secure transactions.
 
-## Tecnologías Utilizadas
-- **Backend**: Node.js, Express
-- **Frontend**: React (o especifica el framework que usas)
-- **Base de Datos**: MongoDB (o la base de datos que usas)
-- **Otros**: Stripe para pagos
-- **Pronto**:  Nginx para el servidor web
+## Used technology
+- **Background service**: Node.js, Express
+- **Frontend**: React (or specify the framework we use)
+- **Database**: MongoDB (or the database you use)
+- **Others**: Stripe for payments
+- **Soon**: Nginx for web server
 
-## Requisitos Previos
-Asegúrate de tener instalado Node.js y npm en tu sistema para poder ejecutar el proyecto. Puedes descargarlos desde [Node.js official website](https://nodejs.org/).
+## Previous Requirements
+Make sure you have Node.js and npm installed on your system to be able to run the project. You can download them from the [Node.js official website](https://nodejs.org/).
 
-## Instalación
+## Facility
 
-### Clonar el Repositorio
-Para obtener el proyecto, primero clona este repositorio en tu máquina local usando:
-- bash
-- git clone [URL-del-repositorio]
-- cd [nombre-del-directorio-del-proyecto]
+### Clone the Repository
+To get the project, first clone this repository to your local machine using:
+- bang
+- git clone [repository-URL]
+- cd [project-directory-name]
 
-### Instalar Dependencias
+### Install Dependencies
 
-#### Backend
-- bash
-- cd backend
-- npm install
+#### Server
+- bang
+- Background CD
+- npm installation
 
-#### Frontend
+#### Interface
 
-- bash
+- bang
 - cd ../frontend
-- npm install
+- npm installation
 
-## Ejecución del Proyecto
+## Project execution
 
-### Iniciar el Backend
-Desde el directorio del backend, ejecuta el siguiente comando para iniciar el servidor de desarrollo:
-- bash
+### Start the backend
+From the backend directory, run the following command to start the development server:
+- bang
 - npm run dev
 
-Esto iniciará el servidor backend en `localhost:3000` (o el puerto configurado).
+This will start the backend server at `localhost:3000` (or whatever port is configured).
 
-### Iniciar el Frontend
-Desde el directorio del frontend, ejecuta el siguiente comando para iniciar la aplicación frontend:
-- bash
+### Start the frontend
+From the frontend directory, run the following command to start the frontend application:
+- bang
 - npm run start
 
-Esto abrirá la aplicación web en el puerto configurado.
+This will open the web application on the configured port.
 
-## Uso de la Aplicación
-Una vez que ambos, el frontend y el backend, estén en ejecución, puedes explorar el ecommerce de Fricano Pastries.
+## Use of the Application
+Once both the frontend and backend are running, you can explore Fricano Pastries eCommerce.
 
