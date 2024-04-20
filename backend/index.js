@@ -6,8 +6,8 @@ const PORT = process.env.PORT  || 3000;
 const cors = require('cors');
 const mongoose = require('mongoose');
 const corsOptions = {
-  origin: 'https://www.fricanopastries.mooo.com', // Reemplaza esto con el dominio real de tu frontend
-  optionsSuccessStatus: 200 // Algunos navegadores antiguos (IE11, varios SmartTVs) requieren esto
+  origin: 'https://www.fricanopastries.mooo.com', 
+  optionsSuccessStatus: 200
 };
 
 const app = express();

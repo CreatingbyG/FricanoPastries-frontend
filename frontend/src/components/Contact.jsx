@@ -26,7 +26,6 @@ const Contact = () => {
           <select id="enquiry" required>
             <option value="">Please select an option</option>
             <option value="sales">Events</option>
-            {/* ... otras opciones ... */}
           </select>
         </div>
         <div className="form-group">

@@ -2,17 +2,6 @@ import React, {useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SuccessCheckout = () => {
-  // const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   // Configura un temporizador para redirigir al usuario después de 3 segundos
-  //   const timer = setTimeout(() => {
-  //     navigate('/');
-  //   }, 8000); 
-
-  //   // Limpieza del temporizador si el componente se desmonta antes de que se complete el tiempo
-  //   return () => clearTimeout(timer);
-  // }, [navigate]);
 
   return (
     <div className="success-checkout">

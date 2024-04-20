@@ -5,15 +5,6 @@ const SidebarMenu = ({ isVisible }) => {
     <aside className={`sidebarMenu ${isVisible ? "expanded" : "collapsed"}`}>
       <nav className="nav__menu">
         <ul className="nav__list">
-          {/* <li className="nav__item">
-            <a href="pavlova">
-              <i
-                className="bi bi-cake-fill"
-                style={{ fontSize: "12px", padding: "3px 5px" }}
-              ></i>
-              La Pavlova
-            </a>
-          </li> */}
           <li className="nav__item">
             <a href="concept">
               <i

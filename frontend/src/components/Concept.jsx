@@ -25,7 +25,6 @@ const Concept = () => {
       Fricano's Pastries awaits you with open arms. Join us on this gastronomic
       journey where tradition, innovation and passion are found in every bite.<i class="bi bi-heart" style={{padding:"5px", color:"pink"}}></i></p>
       <img src={conceptImage} alt="Concept" className="concept-image" />
-      {/* ... más contenido si es necesario */}
     </div>
   );
 };

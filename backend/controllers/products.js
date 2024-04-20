@@ -10,10 +10,10 @@ const addNewProduct = async (req, res) => {
   
     try {
       const savedProduct = await newProduct.save();
-      res.status(201).json(savedProduct); // Asegúrate de enviar una respuesta
+      res.status(201).json(savedProduct);
     } catch (error) {
       console.error('Error saving product:', error);
-      res.status(500).json({ error: 'Error saving product' }); // Envía una respuesta en caso de error
+      res.status(500).json({ error: 'Error saving product' }); 
     }
   };
 

@@ -31,12 +31,6 @@ function Header({ onLogoHover, onLogoLeave, animate, cartItems, isOrderActive, s
               Home
             </a>
           </li>
-          {/* <li>
-            <a href="#" class="nav__links-custom">
-              <i className="bi bi-people" style={{ fontSize: "24px" }}></i>
-              Customers
-            </a>
-          </li> */}
           <li>
           <a href="#" className={`nav__links-custom ${animate ? 'animate' : ' '}`} onClick={() => setIsOrderActive(!isOrderActive)}>
           <i className="bi bi-bag" style={{ fontSize: "24px" }}></i>Orders
@@ -62,17 +56,7 @@ function Header({ onLogoHover, onLogoLeave, animate, cartItems, isOrderActive, s
               )}
             </div>
           </li>
-          {/* <li>
-            <a href="#" class="nav__links-custom">
-              <i className="bi bi-grid" style={{ fontSize: "24px" }}></i>
-              Products
-            </a>
-          </li> */}
         </ul>
-        {/* <div className="login-signup">
-          <button>Login</button>
-          <button className="signup-btn">Sign-up</button>
-        </div> */}
       </div>
     </div>
   );
