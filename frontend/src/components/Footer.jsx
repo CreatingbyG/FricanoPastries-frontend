@@ -20,7 +20,6 @@ const Footer = () => {
         </div>
         <div className="footer-section">
           <h3>Social Media</h3>
-          {/* Asegúrate de reemplazar los # con los enlaces reales */}
           <a href="#" className="social-link"><i className="bi bi-instagram"></i></a>
           <a href="#" className="social-link"><i className="bi bi-youtube"></i></a>
         </div>
