@@ -1,4 +1,4 @@
-# Fricano Pastries e-commerce platform
+# Fricano Pastries E-commerce platform
 
 ## Description
 Welcome to the Fricano Pastries e-commerce project repository. This project is an e-commerce platform where users can browse and purchase cakes, learn about the concept behind the pavlovas created by the founder, and make secure payments through Stripe.
